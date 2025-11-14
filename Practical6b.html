@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox Photo Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .gallery img {
+            width: 250px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 600px) {
+            .gallery img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My Photo Gallery</h1>
+    <div class="gallery">
+        <img src="River.jpg" alt="Photo 1">
+        <img src="Valley.jpg" alt="Photo 2">
+        <img src="SwissAlps.jpg" alt="Photo 3">
+        <img src="Road.jpg" alt="Photo 4">
+        <img src="Forest.jpg" alt="Photo 5">
+
+    </div>
+
+</body>
+
+</html>
